@@ -12,6 +12,7 @@ I first was able to cluster fighters based on their fighting styles by looking a
 - Fighter's that are a jack of all trades that use both striking & grappling but a master of none.
 
 For my UFC Predictions analysis, I first created a baseline model to evaluate my machine learning model against.
+
 <b> Baseline Model </b>
 I scraped data from https://www.bestfightodds.com to grab betting odds for every UFC fight and for each fighter. My baseline model then chooses the betting favorite as the winning prediction. The accuracy of this appraoch was 63%.
 
