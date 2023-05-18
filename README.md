@@ -14,9 +14,11 @@ I first was able to cluster fighters based on their fighting styles by looking a
 For my UFC Predictions analysis, I first created a baseline model to evaluate my machine learning model against.
 
 <b> Baseline Model </b>
+
 I scraped data from https://www.bestfightodds.com to grab betting odds for every UFC fight and for each fighter. My baseline model then chooses the betting favorite as the winning prediction. The accuracy of this appraoch was 63%.
 
 <b> Machine Learning Model </b>
+
 I used Sklearn's train_test_split method to split my data into a training (80%) and test (205) set. I used cross_val_score to evaluate different classification models on the training set and chose the best performing classfier with accuracy as my metric, which resulted in choosing the RandomForestClassifier Model.
 
 I performed feature selection with sklearn's RFECV (Recursive Feature Elmination with Cross Validation) to select the best set of features across the cross validation groups based on the features importance scores. 
