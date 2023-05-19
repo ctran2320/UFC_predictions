@@ -6,7 +6,7 @@ As an avid UFC fan that religiously watches every PPV event and plans to enroll 
 
 ## Data
 <b> Column definitions </b>:
-- <span style="background-color: #FFFF00"> R_ and B_ </span> prefix signifies red and blue corner fighter stats respectively
+- <b> R_ and B_ </b> prefix signifies red and blue corner fighter stats respectively
 - _opp_ containing columns is the average of damage done by the opponent on the fighter
 KD is number of knockdowns
 SIG_STR is no. of significant strikes 'landed of attempted'
