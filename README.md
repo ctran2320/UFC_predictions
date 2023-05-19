@@ -7,51 +7,51 @@ As an avid UFC fan that religiously watches every PPV event and plans to enroll 
 ## Data
 <b> Column definitions </b>:
 - <b> R_ and B_ </b> prefix signifies red and blue corner fighter stats respectively
-- _opp_ containing columns is the average of damage done by the opponent on the fighter
-KD is number of knockdowns
-SIG_STR is no. of significant strikes 'landed of attempted'
-SIG_STR_pct is significant strikes percentage
-TOTAL_STR is total strikes 'landed of attempted'
-TD is no. of takedowns
-TD_pct is takedown percentages
-SUB_ATT is no. of submission attempts
-PASS is no. times the guard was passed?
-REV are the number of reversals
-HEAD is no. of significant strinks to the head 'landed of attempted'
-BODY is no. of significant strikes to the body 'landed of attempted'
-CLINCH is no. of significant strikes in the clinch 'landed of attempted'
-GROUND is no. of significant strikes on the ground 'landed of attempted'
-win_by is method of win
-last_round is last round of the fight (ex. if it was a KO in 1st, then this will be 1)
-last_round_time is when the fight ended in the last round
-Format is the format of the fight (3 rounds, 5 rounds etc.)
-Referee is the name of the Ref
-date is the date of the fight
-location is the location in which the event took place
-Fight_type is which weight class and whether it's a title bout or not
-Winner is the winner of the fight
-Stance is the stance of the fighter (orthodox, southpaw, etc.)
-Height_cms is the height in centimeter
-Reach_cms is the reach of the fighter (arm span) in centimeter
-Weight_lbs is the weight of the fighter in pounds (lbs)
-age is the age of the fighter
-title_bout Boolean value of whether it is title fight or not
-weight_class is which weight class the fight is in (Bantamweight, heavyweight, Women's flyweight, etc.)
-no_of_rounds is the number of rounds the fight was scheduled for
-current_lose_streak is the count of current concurrent losses of the fighter
-current_win_streak is the count of current concurrent wins of the fighter
-draw is the number of draws in the fighter's ufc career
-wins is the number of wins in the fighter's ufc career
-losses is the number of losses in the fighter's ufc career
-total_rounds_fought is the average of total rounds fought by the fighter
-total_time_fought(seconds) is the count of total time spent fighting in seconds
-total_title_bouts is the total number of title bouts taken part in by the fighter
-win_by_Decision_Majority is the number of wins by majority judges decision in the fighter's ufc career
-win_by_Decision_Split is the number of wins by split judges decision in the fighter's ufc career
-win_by_Decision_Unanimous is the number of wins by unanimous judges decision in the fighter's ufc career
-win_by_KO/TKO is the number of wins by knockout in the fighter's ufc career
-win_by_Submission is the number of wins by submission in the fighter's ufc career
-win_by_TKO_Doctor_Stoppage is the number of wins by doctor stoppage in the fighter's ufc career
+- <b> _opp_ </b> containing columns is the average of damage done by the opponent on the fighter
+- <b> KD </b> is number of knockdowns
+- <b> SIG_STR </b> is no. of significant strikes 'landed of attempted'
+- <b> SIG_STR_pct </b> is significant strikes percentage
+- <b> TOTAL_STR </b> is total strikes 'landed of attempted'
+- <b> TD </b> is no. of takedowns
+- <b> TD_pct </b> is takedown percentages
+- <b> SUB_ATT </b> is no. of submission attempts
+- <b> PASS </b> is no. times the guard was passed?
+- <b> REV </b> are the number of reversals
+- <b> HEAD </b> is no. of significant strinks to the head 'landed of attempted'
+- <b> BODY </b> is no. of significant strikes to the body 'landed of attempted'
+- <b> CLINCH </b> is no. of significant strikes in the clinch 'landed of attempted'
+- <b> GROUND </b> is no. of significant strikes on the ground 'landed of attempted'
+- <b> win_by </b> is method of win
+- <b> last_round </b> is last round of the fight (ex. if it was a KO in 1st, then this will be 1)
+- <b> last_round_time </b> is when the fight ended in the last round
+- <b> Format </b> is the format of the fight (3 rounds, 5 rounds etc.)
+- <b> Referee </b> is the name of the Ref
+- <b> date </b> is the date of the fight
+- <b> location </b> is the location in which the event took place
+- <b> Fight_type </b> is which weight class and whether it's a title bout or not
+- <b> Winner </b> is the winner of the fight
+- <b> Stance </b> is the stance of the fighter (orthodox, southpaw, etc.)
+- <b> Height_cms </b> is the height in centimeter
+- <b> Reach_cms </b> is the reach of the fighter (arm span) in centimeter
+- <b> Weight_lbs </b> is the weight of the fighter in pounds (lbs)
+- <b> age </b> is the age of the fighter
+- <b> title_bout </b> Boolean value of whether it is title fight or not
+- <b> weight_class </b> is which weight class the fight is in (Bantamweight, heavyweight, Women's flyweight, etc.)
+- <b> no_of_rounds </b> is the number of rounds the fight was scheduled for
+- <b> current_lose_streak </b> is the count of current concurrent losses of the fighter
+- <b> current_win_streak </b> is the count of current concurrent wins of the fighter
+- <b> draw </b> is the number of draws in the fighter's ufc career
+- <b> wins </b> is the number of wins in the fighter's ufc career
+- <b> losses </b> is the number of losses in the fighter's ufc career
+- <b> total_rounds_fought </b> is the average of total rounds fought by the fighter
+- <b> total_time_fought(seconds) </b> is the count of total time spent fighting in seconds
+- <b> total_title_bouts </b> is the total number of title bouts taken part in by the fighter
+- <b> win_by_Decision_Majority </b> is the number of wins by majority judges decision in the fighter's ufc career
+- <b> win_by_Decision_Split </b> is the number of wins by split judges decision in the fighter's ufc career
+- <b> win_by_Decision_Unanimous </b> is the number of wins by unanimous judges decision in the fighter's ufc career
+- <b> win_by_KO/TKO </b> is the number of wins by knockout in the fighter's ufc career
+- <b> win_by_Submission </b> is the number of wins by submission in the fighter's ufc career
+- <b> win_by_TKO_Doctor_Stoppage </b> is the number of wins by doctor stoppage in the fighter's ufc career
 
 ## Analysis
 I first was able to cluster fighters based on their fighting styles by looking at their fighting dimensions of a mix of striking and grappling. I used Sklearn's KMeans Clustering Algorithm and the common "elbow method" to choose the number of k to reach 4 clusters. After analysis of each cluster, I found that there are 4 main fighting styles:
@@ -64,7 +64,7 @@ For my UFC Predictions analysis, I first created a baseline model to evaluate my
 
 <b> Baseline Model </b>
 
-I scraped data from https://www.bestfightodds.com to grab betting odds for every UFC fight and for each fighter. My baseline model then chooses the betting favorite as the winning prediction. The accuracy of this appraoch was 63%.
+I scraped data from https://www.bestfightodds.com to grab betting odds for every UFC fight and for each fighter. My baseline model then chooses the betting favorite as the winning prediction. The accuracy of this appraoch was 63.2%.
 
 <b> Machine Learning Model </b>
 
