@@ -77,10 +77,8 @@ I then hypertuned the Random Forest Classifier parameters (n_estimators, max_dep
 I fitted the final model on the training set and predicted on the testing set and evaluated the model using various classification metrics.
 
 ## Results
-CONFUSION MATRIX
-ROC/AUC CURVE
+![confusion_matrix](https://github.com/ctran2320/UFC_predictions/assets/133697095/1ee1a17a-97fa-4560-b5e9-1ba2dd536b98)
+![roc_auc](https://github.com/ctran2320/UFC_predictions/assets/133697095/a584431e-deb4-44bd-a51a-f65812e1f9a1)
 
-Our accuracy on our test set is 62%, which performs worse than just going based off the odds that betting lines creates. The difference between our recall and specificity is outstanding, as our recall is low at 25% and our specificity score is high at 90%. This is intuitively correct as our model is having a hard time to predict when the underdog wins. The inherent randomness of fights where every fighter has a punchers chance, and being a sport where anything can happend and anyone can win on a given day, the model is doing a poor job of predicting when the underdog wins.
-
-## Future Work
+Our accuracy on our test set is 63%, which performs just as well as our baseline model as predicting the favorite based on betting lines. This performance is not terrible in that there is usually a lot of analytics and machine learning involved in creating betting lines, and we are able to perform on par solely using fight data and fighter statistics. The difference between our recall and specificity is outstanding, as our recall is low at 23% and our specificity score is high at 92%. This is intuitively correct as our model is having a hard time to predict when the underdog wins. The inherent randomness of fights where every fighter has a punchers chance, and being a sport where anything can happend and anyone can win on a given day, the model is doing a poor job of predicting when the underdog wins.
 
